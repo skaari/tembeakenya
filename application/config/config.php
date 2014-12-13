@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/tembeakenya/site/home';
+$config['base_url']	= 'http://localhost/tembeakenya/index.php/';
 
 /*
 |--------------------------------------------------------------------------

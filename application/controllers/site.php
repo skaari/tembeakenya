@@ -2,33 +2,28 @@
 
 class Site extends CI_Controller {
     
-    public function __construct(){
-        
+    function __construct(){
+        parent::__construct();
+        $this->load->model('general_model');
     }
     
-    public function index(){
-        echo(":)");
+    function index(){
+        $this->load->view("includes/header");
+        $this->load->view("includes/navigation");
+        $this->load->view("index");
+        $this->load->view("includes/footer");
     }
-
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('welcome_message');
-	}
+    
+    function contact(){
+        $this->load->view("includes/header");
+        $this->load->view("includes/navigation");
+        $this->load->view("contact");
+        $this->load->view("includes/footer");
+    }
+    
+    function test(){
+        echo(base_url());
+    }
 }
 
 /* End of file welcome.php */
